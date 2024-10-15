@@ -2,6 +2,7 @@ package com.proxym.libraryapp.library;
 
 import com.proxym.libraryapp.book.Book;
 import com.proxym.libraryapp.member.Member;
+import com.proxym.libraryapp.member.money.Money;
 
 import java.time.LocalDate;
 
@@ -34,7 +35,7 @@ public interface Library {
      * @param book the {@link Book} they return
      * @param member the {@link Member} who is returning the book
      *
-     * @see Member#payBook(int)
+     * @see Member#payAmount(Money)
      */
     void returnBook(Book book, Member member);
 }
