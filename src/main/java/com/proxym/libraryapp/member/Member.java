@@ -8,7 +8,7 @@ import com.proxym.libraryapp.member.money.Money;
  * A member can be either a student or a resident
  */
 public abstract class Member {
-    private final long DEFAULT_OFFER_DAY_FOR_FIRST_MEMBER = 15;
+    private final long DEFAULT_OFFER_DAY_FOR_FIRST_MEMBER = 0;
     /**
      * An initial sum of money the member has
      */

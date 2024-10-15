@@ -8,7 +8,6 @@ public class StudentPayStrategy implements PayStrategy {
 
     @Override
     public Money mustPay(long keepBookDay, long offerDay) {
-        System.out.println(keepBookDay + "  " + offerDay);
         keepBookDay = keepBookDay > offerDay ? keepBookDay - offerDay : 0;
 
         return Money.fromDouble(keepBookDay * PRICE);

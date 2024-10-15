@@ -1,8 +1,6 @@
 package com.proxym.libraryapp.library;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -43,12 +41,13 @@ public class LibraryTest {
 
 
     @BeforeEach
-    void setup() throws JsonParseException, JsonMappingException, IOException {
+    void setup() throws IOException {
         ObjectMapper mapper = JsonMapper.builder() // or different mapper for other format
                 .addModule(new JavaTimeModule())
                 .build();
         File booksJson = new File("src/test/resources/books.json");
-        books = mapper.readValue(booksJson, new TypeReference<List<Book>>() {});
+        books = mapper.readValue(booksJson, new TypeReference<>() {
+        });
 
         library = new LibraryImp();
         bookRepository = new BookRepository();

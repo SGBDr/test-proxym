@@ -13,8 +13,8 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class LibraryImp implements Library {
-    private BorrowManager borrowManager;
-    private BookManager bookManager;
+    private final BorrowManager borrowManager;
+    private final BookManager bookManager;
 
     public LibraryImp() {
         this.borrowManager = new BorrowManager();

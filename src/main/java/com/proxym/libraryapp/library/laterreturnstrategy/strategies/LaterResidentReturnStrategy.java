@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class LaterResidentReturnStrategy implements LaterReturnStrategy {
-    private static long MAXIMUM_KEEPING_DAY = 60L;
+    private static final long MAXIMUM_KEEPING_DAY = 60L;
 
     @Override
     public boolean isLate(LocalDate localDate) {

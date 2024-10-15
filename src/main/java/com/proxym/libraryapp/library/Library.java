@@ -8,7 +8,6 @@ import java.time.LocalDate;
 
 /**
  * The library class is in charge of stocking the books and managing the return delays and members
- *
  * The books are available via the {@link com.proxym.libraryapp.book.BookRepository}
  */
 public interface Library {

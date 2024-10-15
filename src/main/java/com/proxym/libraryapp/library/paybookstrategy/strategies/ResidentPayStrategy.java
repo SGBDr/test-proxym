@@ -13,6 +13,7 @@ public class ResidentPayStrategy implements PayStrategy {
         keepBookDay = keepBookDay > offerDay ? keepBookDay - offerDay : keepBookDay;
         long extraDay = keepBookDay > MAXIMUM_KEEPING_DAY ? (keepBookDay - MAXIMUM_KEEPING_DAY) : 0;
         keepBookDay -= extraDay;
+
         return Money.fromDouble(extraDay * EXTRA_PRICE + keepBookDay * INITIAL_PRICE);
     }
 }
